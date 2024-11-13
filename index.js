@@ -34,7 +34,7 @@ app.post("/agenda", (req, res) => {
 app.delete("/agenda/:id", (req, res) => {
   const { id } = req.params;
 
-  const index = agenda.findIndex((item) => item.id === id);  // Corrigi a variável 'users' para 'agenda'
+  const index = agenda.findIndex((item) => item.id === id);  
 
   if (index < 0) {
     return res.status(404).json({ error: "Item não encontrado" });
